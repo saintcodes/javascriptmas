@@ -22,4 +22,5 @@ const faveFoods = {
 
 const {breakfast, lunch, supper} = faveFoods
 
-console.log(breakfast, lunch, supper)
+document.querySelector("#meals").innerHTML = 
+`For breakfast, I only like ${breakfast}. For lunch, I love ${lunch}, and for supper I usually want ${supper}.`
