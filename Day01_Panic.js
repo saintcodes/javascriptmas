@@ -12,8 +12,12 @@ Example input: "I'm almost out of coffee"
 Example output: "I'M 😱 ALMOST 😱 OUT 😱 OF 😱 COFFEE!"
 */
 
+function panic(str) {
+  return newStr = str.toUpperCase().split(" ").join(" 😱 ") + "!"
+}
 
 // Test your function
 console.log(panic("I'm almost out of coffee")); 
 console.log(panic("winter is coming"))
+console.log(panic("Hello"))
 
