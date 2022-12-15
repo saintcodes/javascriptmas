@@ -1,5 +1,7 @@
 import userData from "./data.js";
 
+// import { parse } from 'node-html-parser';
+// parse = require('node-html-parser');
 /* Totally Private Data Farm 
 
 Good news, renown advertising firm Evil Corp. wants to purchase our 
@@ -22,10 +24,28 @@ array should look like this when you're done:
 }
 
 Read about toDateString() for info on formatting a readable date. 
-
+const transformData = (data) => {
+    const result = data.map((person) => {
+        const birthdateObject = new Date(person.dob.date);
+        const formattedBirthday = birthdateObject.toDateString();
+        return {
+            fullName: `${person.name.first} ${person.name.last}`,
+            birthday: formattedBirthday
+        }
+    })
+    return result;
 */
 function transformData(data){
-
+    const result = data.map((person) => {
+        let birthDate = new Date(person.dob.date).toDateString();
+        return {
+            fullName: `${person.name.first} ${person.name.last}`,
+            birthday: birthDate
+        }
+    })
+    return result
 }
 
 console.log(transformData(userData));
+
+// console.log('hei')
