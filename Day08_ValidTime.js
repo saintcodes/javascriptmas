@@ -2,7 +2,11 @@ function validTime(str) {
     //  write code here.
     let time = str.split(":")
     const [hours, minutes] = time
-    console.log(typeof(hours), typeof(minutes))
+    if (parseInt(hours) <= 24 && parseInt(hours) >= 1 && parseInt(minutes) <=59 && parseInt(minutes) >= 0) {
+        return true
+    } else {
+        return false
+    }
 }
 
 
