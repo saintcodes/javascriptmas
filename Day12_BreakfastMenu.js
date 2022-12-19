@@ -13,3 +13,7 @@ the following div for each food in the array:
 */
 
 const dinnerFoods = ['🍝','🍔','🌮']
+
+document.querySelector("#menu").innerHTML = dinnerFoods.map((item) => {
+  return `<div class="food">${item}</div>`
+}).join('')
