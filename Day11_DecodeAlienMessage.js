@@ -1,10 +1,3 @@
-/* We Come in Peace!  
-We've received what (we assume) is a message of peace and brotherhood from 
-an alien planet. They almost got it right, but the messages are 
-backward. Write functions to reverse the backward messages so we can 
-read what they have to say! 
-*/ 
-
 const title = ":htraE no od ot ffutS";
 const messages = [
             "maerc eci yrT",
@@ -23,8 +16,8 @@ Example input: !htrae ot emocleW
 Example output: Welcome to earth!
 */  
 
-function reverseString(arr){
-    return arr;
+function reverseString(string) {
+    return string.split('').reverse().join('')
 }
 
 /*
@@ -36,7 +29,7 @@ reverse the strings manually.
 */ 
 
 function reverseStringsInArray(arr){
-    return arr;
+    return arr.map((str) => reverseString(str))
 }
 
 console.log(reverseString(title));
