@@ -25,8 +25,22 @@ const kittyPrizes = [
 ];
 
 function flatten(arr){
+  return arr.flat()
+}
 
+function flattenManually(arr) {
+  let flatArr = []
+  arr.forEach((element) => {
+    if (typeof element === "object") {
+      flatArr.push(...flatten(element))
+    } else {
+      flatArr.push(element)
+    }
+  })
+  return flatArr
 }
 
 console.log(flatten(kittyPrizes));
+console.log(flattenManually(kittyPrizes));
 console.log(flatten(kittyScores));
+console.log(flattenManually(kittyScores));
