@@ -7,7 +7,8 @@ If the word is palidrome, return true. If it isn't, return false.
 */
 
 function isPalindrome(str){
-    
+  let reverseStr = str.split('').reverse().join('')
+  return str === reverseStr
 }
 
 // Test your function
@@ -16,3 +17,4 @@ console.log(isPalindrome("civic"));
 console.log(isPalindrome("octopus"));
 console.log(isPalindrome("pumpkins"));
 console.log(isPalindrome("madam"));
+console.log(isPalindrome("mada"));
