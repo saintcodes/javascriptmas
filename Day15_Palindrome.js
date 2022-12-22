@@ -17,4 +17,4 @@ console.log(isPalindrome("civic"));
 console.log(isPalindrome("octopus"));
 console.log(isPalindrome("pumpkins"));
 console.log(isPalindrome("madam"));
-console.log(isPalindrome("mada"));
+console.log(isPalindrome("mayday"));
