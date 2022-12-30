@@ -1,8 +1,6 @@
 function centuryFromYear(num) {
   //  write code here.
-  if (Math.floor(num) === "00") {
-    console.log('hi')
-  }
+  return Math.floor(num/100) + 1
 }
 
 
